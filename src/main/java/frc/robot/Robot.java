@@ -23,6 +23,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 public class Robot extends TimedRobot {
+  /*
   private static final String kDefaultAuto = "Default";
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
@@ -40,17 +41,17 @@ public class Robot extends TimedRobot {
   Joystick jStick = new Joystick(1);
   Joystick bStick = new Joystick(2);
 
-  double speedAddition = 2.00;
+  double speedAddition = .75;*/
 
   /**
    * This function is run when the robot is first started up and should be used
    * for any initialization code.
    */
   @Override
-  public void robotInit() {
+  public void robotInit() {/*
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
-    SmartDashboard.putData("Auto choices", m_chooser);
+    SmartDashboard.putData("Auto choices", m_chooser);*/
   }
 
   /**
@@ -79,15 +80,15 @@ public class Robot extends TimedRobot {
    * make sure to add them to the chooser code above as well.
    */
   @Override
-  public void autonomousInit() {
+  public void autonomousInit() {/*
     m_autoSelected = m_chooser.getSelected();
     // m_autoSelected = SmartDashboard.getString("Auto Selector", kDefaultAuto);
-    System.out.println("Auto selected: " + m_autoSelected);
+    System.out.println("Auto selected: " + m_autoSelected);*/
   }
 
   /** This function is called periodically during autonomous. */
   @Override
-  public void autonomousPeriodic() {
+  public void autonomousPeriodic() {/*
     switch (m_autoSelected) {
       case kCustomAuto:
         // Put custom auto code here
@@ -96,7 +97,7 @@ public class Robot extends TimedRobot {
       default:
         // Put default auto code here
         break;
-    }
+    }*/
   }
 
   /** This function is called once when teleop is enabled. */
@@ -106,7 +107,7 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {
+  public void teleopPeriodic() {/*
     backRightMotor.set(ControlMode.PercentOutput,
         (((jStick.getRawAxis(4) / 3) * -1.0) + ((jStick.getRawAxis(1) / 3) * -1.0) + ((jStick.getRawAxis(0) / 3) * 1.0))
             * speedAddition);
@@ -144,7 +145,7 @@ public class Robot extends TimedRobot {
       wheelOfDeathjpg.set(ControlMode.PercentOutput, 0);
       wheelOfDeath2jpg.set(ControlMode.PercentOutput, 0);
     }
-
+*/
   }
 
   /** This function is called once when the robot is disabled. */
